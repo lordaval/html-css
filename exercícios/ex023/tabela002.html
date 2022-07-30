@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -20,13 +21,33 @@
             padding: 10px;
         }
 
-        td.num {
-            text-align: right;
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead {
+            position: sticky;
+            top: -1px;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
         }
     </style>
 </head>
@@ -34,6 +55,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES
+        CAPTION
         TABLE
             THEAD
                 TR, TD, TH
@@ -43,10 +65,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -161,10 +184,13 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, culpa. Consequatur blanditiis, ea sint aut voluptate, qui distinctio culpa modi id architecto, perspiciatis at facere fuga deleniti! Tenetur, eum odio.
+    </p>
 </body>
 </html>
